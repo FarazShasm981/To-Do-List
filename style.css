@@ -1,0 +1,127 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    height: 100vh;
+    min-height: 100vh;
+    background: linear-gradient(100deg, rgb(62, 133, 184), rgb(21, 66, 99));
+}
+
+.container {
+    background: rgb(242, 242, 242);
+    position: absolute;
+    width: 40%;
+    min-width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    border-radius: 20px;
+}
+
+#newtask {
+    /* background-color: #ffffffff; */
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+
+}
+
+#newtask input:focus {
+    outline: none;
+    border-color: rgb(6, 100, 167);
+}
+
+#newtask input {
+    width: 70%;
+    height: 45px;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    padding: 12px;
+}
+
+#newtask button {
+    position: relative;
+    float: right;
+    width: 20%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgb(6, 100, 167);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#tasks-list {
+    background-color: #ffffff;
+    margin-top: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    position: relative;
+}
+
+#tasks-list li {
+    padding: 15px 30px;
+    font-size: large;
+    list-style: none;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+
+}
+
+#tasks-list li::before {
+    content: '';
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background: url(/images/unchecked.png);
+    top: 15px;
+    left: 2px;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#tasks-list li.list {
+    text-decoration: line-through;
+    color: #8d8c8c;
+}
+
+#tasks-list li.list::before {
+    background-image: url(/images/checked.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+li span {
+    color: #080808;
+    font-size: 22px;
+    border-radius: 70px;
+    width: 40px;
+    position: absolute;
+    right: 0px;
+    top: 14px;
+    text-align: center;
+}
+
+li span:hover {
+    background-color: #949494;
+}
